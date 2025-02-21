@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap 5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            nav {
+                font-size: 40px;
+                color:#ffffff
+            }
+            body {
+                text-align: center;
+                background-color: #000000;
+                font-family: "Public Sans", sans-serif;
+                font-weight: 100;
+            }
+
+            nav a {
+                color: rgb(255, 255, 255); 
+                text-decoration: none; 
+                padding: 10px 15px; 
+                border-radius: 5px; 
+                transition: background 0.3s ease-in-out; 
+            }
+
+            /* Highlights */
+            nav a.active {
+                background-color: #000000;
+                color: #6e6e6e;
+                font-weight: bold;
+            }
+
+            .bold-section {
+                font-weight: bold; 
+            }
+
+            .top-left-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <nav >
+            <h1></h1>
+            <div class="text-end">
+                <a href="http://localhost/Assig2/Lab2.html">Home</a>
+            </div>
+            <div class="text-end">
+                <a href="http://localhost/Assig2/photos.html">Photos</a>
+            </div>
+            <div class="text-end">
+                <a href="http://localhost/Assig2/bio.html">Bio</a>
+            </div>
+            <div class="text-end">
+                <a href="http://localhost/Assig2/blog.html">Blog</a>
+            </div>
+            <div class="text-end">
+                <a href="http://localhost/Assig2/contact.html">Contact</a>
+            </div>
+        </nav>
+        <div class="top-left-container mt-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="142285_hero.jpg" class="img-fluid rounded" alt="Image 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="admin-winter.jpg" class="img-fluid rounded" alt="Image 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="FY21_403002576_MH07_0021.jpg" class="img-fluid rounded" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="moscow-main-campus.jpg" class="img-fluid rounded" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="hero-230323.jpg" class="img-fluid rounded" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="customer-story-quote-image-university-of-idaho-adapts-experience.jpg" class="img-fluid rounded" alt="Image 3">
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav a");
+            let currentUrl = window.location.href;
+    
+            links.forEach(link => {
+                if (link.href === currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</html>
